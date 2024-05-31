@@ -1,10 +1,9 @@
-import Navbar from './Navbar.jsx'
 
 function HomePage() {
   return (
-    <>
-      <Navbar/>
-    </>
+    <main>
+      Home page !
+    </main>
   )
 }
 

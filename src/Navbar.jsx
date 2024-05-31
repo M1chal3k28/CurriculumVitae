@@ -11,7 +11,7 @@ function Navbar() {
 
     return (
         <nav className="xl:text-2xl bg-blue-300 opacity-70 hover:opacity-100 transition-all duration-300">
-            <div className="max-w-5xl mx-auto px-5">
+            <div className="max-w-5xl mx-auto px-2">
                 <div className="flex justify-between">
                     <div className="flex space-x-4">
                         {/* <!-- logo --> */}

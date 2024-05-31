@@ -5,7 +5,7 @@ function NotFoundPage() {
     return (
         <div>
             <h1>404 Page not found</h1>
-            <Link to="/Cv_react_tailwindcss">Home Page</Link>
+            <Link to="/Cv_react_tailwindcss/">Home Page</Link>
         </div>
     );
 }
