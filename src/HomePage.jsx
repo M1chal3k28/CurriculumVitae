@@ -1,6 +1,6 @@
 import Navbar from './Navbar.jsx'
 
-function App() {
+function HomePage() {
   return (
     <>
       <Navbar/>
@@ -8,4 +8,4 @@ function App() {
   )
 }
 
-export default App
+export default HomePage
