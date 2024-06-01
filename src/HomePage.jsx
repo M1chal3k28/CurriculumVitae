@@ -1,8 +1,9 @@
+import AboutMe from "./AboutMe.jsx"
 
 function HomePage() {
   return (
     <main>
-      Home page !
+      <AboutMe/>
     </main>
   )
 }

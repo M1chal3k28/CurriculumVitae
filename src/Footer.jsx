@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <footer className="bg-gray-900 text-white">
-            <div className="md:px-12 px-10 bg-[#ffffff19] py-3 flex items-center flex-col space-y-4">
-                <div class="w-full md:px-20">
-                    <div className="flex flex-row md:justify-around justify-between">
-                        <div class="flex justify-center">
+            <div className="md:px-12 px-10 bg-[#ffffff19] py-2 flex items-center flex-col space-y-4">
+                <div className="w-full md:px-20">
+                    <div className="flex flex-row justify-around">
+                        <div className="flex justify-center mx-2">
                             <div className="items-center md:flex-row md:space-x-1 flex flex-col">
-                                <a href="" className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-2xl">Skills</a>
-                                <a href="" className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-2xl">Education</a>
-                                <a href="" className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-2xl">Projects</a>
-                                <a href="" className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-2xl">About Me</a>
+                                <a href="" className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Skills</a>
+                                <a href="" className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Education</a>
+                                <a href="" className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Projects</a>
+                                <a href="" className="py-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">About Me</a>
                             </div>
                         </div>
 
                         <div className="items-center flex md:flex-row md:space-x-3 md:space-y-0 space-x-0 flex-col space-y-1 justify-center">
-                            <div class="flex flex-row space-x-3">
+                            <div className="flex flex-row space-x-3">
                                 <a href=""><i className="fa-brands fa-github"></i></a>
 
                                 {/* leetcode icon */}
@@ -27,9 +27,9 @@ function Footer() {
                                 </a>
                             </div>
 
-                            <div class="flex flex-row space-x-3">
-                                <a href=""><i class="fa-solid fa-envelope"></i></a>
-                                <a href=""><i class="fa-brands fa-stack-overflow"></i></a>
+                            <div className="flex flex-row space-x-3">
+                                <a href=""><i className="fa-solid fa-envelope"></i></a>
+                                <a href=""><i className="fa-brands fa-stack-overflow"></i></a>
                             </div>
                         </div>
                     </div>
