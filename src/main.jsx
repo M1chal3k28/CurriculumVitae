@@ -8,6 +8,54 @@ import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 
 import './index.css'
+import Particles from 'particlesjs'
+
+window.onload = () => {
+  Particles.init({
+    selector: '.background',
+    color: "#222222",
+    connectParticles: "true",
+    maxParticles: "60",
+    responsive: [
+      {
+        breakpoint: 
+  768
+  ,
+        options: {
+          maxParticles: 
+  200,
+  
+  
+  
+          connectParticles: 
+  false
+        }
+      }, {
+        breakpoint: 
+  425
+  ,
+        options: {
+          maxParticles: 
+  100
+  ,
+          connectParticles: 
+  true
+        }
+      }, {
+        breakpoint: 
+  320
+  ,
+        options: {
+          maxParticles: 
+  0
+   
+  // disables particles.js
+        }
+      }
+    ]
+  });
+}
+
 
 const router = createBrowserRouter([
   {
