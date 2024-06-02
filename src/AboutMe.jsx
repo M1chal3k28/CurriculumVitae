@@ -15,8 +15,8 @@ function AboutMe() {
                     <div></div>
                     {/* content */}
                     <div className="word-wrap px-4">
-                        Hi, I am Michael from small town called Justynów near Łódź. I study in technical secondary school no 9 in Łódź named after KEN) on a programming profile.
-                        In my free time a program a lot, watch films, play games and train calistenics. 
+                        Hi, I am Michael from small town called Justynów near Łódź. I study in Technical Secondary school no 9 in Łódź (named after KEN) on a programming profile.
+                        In my free time I program a lot, watch films, play games and train calisthenics. 
                     </div>
                 </div>
             </div>

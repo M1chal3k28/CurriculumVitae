@@ -18,38 +18,21 @@ window.onload = () => {
     maxParticles: "60",
     responsive: [
       {
-        breakpoint: 
-  768
-  ,
+        breakpoint: 768,
         options: {
-          maxParticles: 
-  200,
-  
-  
-  
-          connectParticles: 
-  false
+          maxParticles: 200,
+          connectParticles: false
         }
       }, {
-        breakpoint: 
-  425
-  ,
+        breakpoint: 425,
         options: {
-          maxParticles: 
-  100
-  ,
-          connectParticles: 
-  true
+          maxParticles: 100,
+          connectParticles: false
         }
       }, {
-        breakpoint: 
-  320
-  ,
+        breakpoint: 320,
         options: {
-          maxParticles: 
-  0
-   
-  // disables particles.js
+          maxParticles: 0
         }
       }
     ]
