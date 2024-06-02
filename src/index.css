@@ -10,3 +10,24 @@
     z-index: -1;
     height: 100%;
 }
+
+/* CertificateImage div  */
+.ceftificateImg {
+    z-index: 100;
+    position: fixed;
+    left: 50%;
+    top: 50%;   
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    height: 90%;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+}

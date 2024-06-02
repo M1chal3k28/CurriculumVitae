@@ -26,15 +26,15 @@ function Navbar() {
 
                         {/* primary nav */}
                         <div className="hidden md:flex items-center space-x-3">
-                            <a href="" className="py-4 px-1 text-gray-700 hover:text-gray-900">Skills</a>
-                            <a href="" className="py-4 px-1 text-gray-700 hover:text-gray-900">Education</a>
-                            <a href="" className="py-4 px-1 text-gray-700 hover:text-gray-900">Projects</a>
+                            <a href="" className="py-4 px-1 text-gray-600 hover:text-gray-900">Skills</a>
+                            <a href="" className="py-4 px-1 text-gray-600 hover:text-gray-900">Education</a>
+                            <a href="" className="py-4 px-1 text-gray-600 hover:text-gray-900">Projects</a>
                         </div>
                     </div>
 
                     {/* Secondary nav */}
                     <div className="hidden md:flex items-center">
-                        <a href="" className="py-2 px-3 text-gray-700 font-bold bg-black-300 rounded hover:bg-blue-200 rounded transition duration-300">About Me</a>
+                        <a href="" className="py-2 px-3 text-gray-700 font-bold bg-black-300 rounded hover:bg-last rounded transition duration-300">About Me</a>
                     </div>
 
                     {/* mobile button visible only when small screen */}

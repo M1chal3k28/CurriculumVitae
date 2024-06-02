@@ -15,7 +15,7 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className="items-center flex md:flex-row md:space-x-3 md:space-y-0 space-x-0 flex-col space-y-1 justify-center">
+                        <div className="items-center flex md:flex-row md:space-x-3 md:space-y-0 space-x-0 flex-col space-y-1 justify-center md:text-2xl">
                             <div className="flex flex-row space-x-3">
                                 <a href=""><i className="fa-brands fa-github"></i></a>
 
