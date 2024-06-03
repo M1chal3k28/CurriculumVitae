@@ -25,7 +25,7 @@ function CourseCard(props) {
                 </div>
             </button>
 
-            <div ref={container} className="ceftificateImg bg-last max-[1200px]:h-auto py-3 flex hidden">
+            <div ref={container} className="assetsContainer bg-last max-[1200px]:h-auto py-3 flex hidden">
                 <button onClick={() => toggleCeftificate()} className="absolute top-0 right-0 md:top-2 md:right-5 cursor-pointer py-2 px-2 z-50"><i className="fa-regular fa-circle-xmark"></i></button>
                 <div className="relative w-full h-full flex justify-center items-center"> 
                     <img src={props.certificate} alt="Certification Image" className="object-contain h-[90%]"/>

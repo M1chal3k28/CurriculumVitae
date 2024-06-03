@@ -1,4 +1,5 @@
 import React, {useRef} from 'react'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const btnRef = useRef(null);
@@ -8,6 +9,11 @@ function Navbar() {
         menuRef.current.classList.toggle('hidden');
         btnRef.current.classList.toggle('tham-active');
     };
+
+    const currPath = "/Cv_react_tailwindcss/";
+    const Skills = currPath + "skills";
+    const Education = currPath + "education";
+    const Projects = currPath + "projects";
 
     return (
         <nav className="xl:text-2xl bg-primary opacity-70 hover:opacity-100 transition-all duration-300">
@@ -26,15 +32,15 @@ function Navbar() {
 
                         {/* primary nav */}
                         <div className="hidden md:flex items-center space-x-3">
-                            <a href="" className="py-4 px-1 text-gray-600 hover:text-gray-900">Skills</a>
-                            <a href="" className="py-4 px-1 text-gray-600 hover:text-gray-900">Education</a>
-                            <a href="" className="py-4 px-1 text-gray-600 hover:text-gray-900">Projects</a>
+                            <Link to={Skills} className="py-4 px-1 text-gray-600 hover:text-gray-900">Skills</Link>
+                            <Link to={Education} className="py-4 px-1 text-gray-600 hover:text-gray-900">Education</Link>
+                            <Link to={Projects}className="py-4 px-1 text-gray-600 hover:text-gray-900">Projects</Link>
                         </div>
                     </div>
 
                     {/* Secondary nav */}
                     <div className="hidden md:flex items-center">
-                        <a href="" className="py-2 px-3 text-gray-700 font-bold bg-black-300 rounded hover:bg-last rounded transition duration-300">About Me</a>
+                        <Link to={currPath} className="py-2 px-3 text-gray-700 font-bold bg-black-300 rounded hover:bg-last rounded transition duration-300">About Me</Link>
                     </div>
 
                     {/* mobile button visible only when small screen */}
