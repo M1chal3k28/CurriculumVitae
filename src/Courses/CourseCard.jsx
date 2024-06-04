@@ -3,7 +3,7 @@ import React, {useRef} from 'react'
 
 function CourseCard(props) {
     let i = 0;
-    const images = props.imageSrc.map((image) => <li key={i++} ><img src={image} height={props.h} width={props.w} className="object-scale-down w-full max-w-32"/></li>);
+    const images = props.imageSrc.map((image) => <li key={i++} ><img src={image} className="object-scale-down w-full max-w-32"/></li>);
     
     const container = useRef(null);
 

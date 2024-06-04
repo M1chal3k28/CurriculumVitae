@@ -40,7 +40,7 @@ function Navbar() {
 
                     {/* Secondary nav */}
                     <div className="hidden md:flex items-center">
-                        <Link to={currPath} className="py-2 px-3 text-gray-700 font-bold bg-black-300 rounded hover:bg-last rounded transition duration-300">About Me</Link>
+                        <Link to={currPath} className="py-2 px-3 text-gray-700 font-bold bg-black-300 rounded hover:bg-last rounded transition duration-300">Courses</Link>
                     </div>
 
                     {/* mobile button visible only when small screen */}

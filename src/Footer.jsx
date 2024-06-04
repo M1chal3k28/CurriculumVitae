@@ -7,7 +7,7 @@ function Footer() {
     const Projects = currPath + "projects";
 
     return (
-        <footer className="bg-gray-900 text-white">
+        <footer className="bg-gray-900 text-white absolute bottom-0 w-full">
             <div className="md:px-12 px-10 bg-[#ffffff19] py-2 flex items-center flex-col space-y-4">
                 <div className="w-full md:px-20">
                     <div className="flex flex-row justify-around">
@@ -16,13 +16,13 @@ function Footer() {
                                 <Link to={Skills}    className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Skills</Link>
                                 <Link to={Education} className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Education</Link>
                                 <Link to={Projects}  className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Projects</Link>
-                                <Link to={currPath}  className="py-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">About Me</Link>
+                                <Link to={currPath}  className="py-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Courses</Link>
                             </div>
                         </div>
 
                         <div className="items-center flex md:flex-row md:space-x-3 md:space-y-0 space-x-0 flex-col space-y-1 justify-center md:text-2xl">
                             <div className="flex flex-row space-x-3">
-                                <a href=""><i className="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/M1chal3k28" target="_blank"><i className="fa-brands fa-github"></i></a>
 
                                 {/* leetcode icon */}
                                 <a href="https://leetcode.com/u/Michal3k28/" target="_blank" className="flex items-center">

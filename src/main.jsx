@@ -2,8 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader | for carousel
-
 import App from './App.jsx'
 import NotFoundPage from './NotFoundPage.jsx'
 import Navbar from './Navbar.jsx'
@@ -13,6 +11,7 @@ import Footer from './Footer.jsx'
 import CourseContainer from './Courses/CoursesContainer.jsx'
 import AboutMe from "./AboutMe.jsx"
 import ProjectsContainer from './Projects/ProjectsContainer.jsx';
+import EducationsContainer from './Education/EducationsContainer.jsx'
 
 import './index.css'
 import Particles from 'particlesjs'
@@ -50,11 +49,7 @@ window.onload = () => {
 const router = createBrowserRouter([
   {
     path: '/Cv_react_tailwindcss/',
-    element: <>
-        <Navbar />
-        <App />
-        <Footer />
-      </>,
+    element: <App/>,
     children: [
       {
         path: '/Cv_react_tailwindcss/',
@@ -66,7 +61,12 @@ const router = createBrowserRouter([
         element: <>
           <ProjectsContainer />
         </>,
-      }
+      },  {
+        path: '/Cv_react_tailwindcss/education',
+        element: <>
+          <EducationsContainer />
+        </>,
+      } 
     ],
   }, {
     path: '*',
