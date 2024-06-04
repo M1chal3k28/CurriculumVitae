@@ -1,4 +1,4 @@
-import profImg from "./assets/profiImg.jpg"
+import profImg from "../assets/profiImg.jpg"
 
 function AboutMe() {
     return (

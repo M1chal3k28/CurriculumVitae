@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
-import NotFoundPage from './NotFoundPage.jsx'
-import Navbar from './Navbar.jsx'
-import Footer from './Footer.jsx'
+import Navbar from './Parts/Navbar.jsx'
+import Footer from './Parts/Footer.jsx'
+import NotFoundPage from "./Parts/NotFoundPage.jsx"
 
 // Parts
 import CourseContainer from './Courses/CoursesContainer.jsx'
-import AboutMe from "./AboutMe.jsx"
 import ProjectsContainer from './Projects/ProjectsContainer.jsx';
 import EducationsContainer from './Education/EducationsContainer.jsx'
 

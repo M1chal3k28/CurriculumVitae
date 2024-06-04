@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, {useRef} from 'react'
-import Carousel from "../Carousel";
+import Carousel from "../Parts/Carousel";
 
 function ProjectCard(props) {
     let i = 0;
