@@ -15,6 +15,11 @@ import tetrisLogo from "./assets/tetrisCmakeRaylib/tetrisLogo.png"
 import tetrisGameplay from "./assets/tetrisCmakeRaylib/gameplay.png"
 import tetrisVid from "./assets/tetrisCmakeRaylib/tetrisVid.mp4"
 
+// Game in sfml and cpp
+import stickmanLogo from "./assets/stickmanJump/stickmanLogo.png"
+import stickmanGameplay from "./assets/stickmanJump/gameplay.png"
+import stickmanVid from "./assets/stickmanJump/stickmanJumpVid.mp4"
+
 const Projects = [
     { // Chat in AJAX, php, mysql, js, css
         id: 1,
@@ -33,6 +38,7 @@ const Projects = [
         ],
         video: chatVideo,
         desc: "Real-time chat made in AJAX and php with tutorial",
+        code: "https://github.com/M1chal3k28/Chat_AJAX.git",
     }, { // Snake in python
         id: 2,
         logo: snakeLogo,
@@ -44,8 +50,9 @@ const Projects = [
         ],
         video: snakeGameplayVid,
         desc: "Snake game written in python (pygame)",
+        code: "https://github.com/M1chal3k28/snake.git",
     }, { // Tetris
-        id: 2,
+        id: 3,
         logo: tetrisLogo,
         images: [
             { // gameplay screenshot
@@ -55,6 +62,19 @@ const Projects = [
         ],
         video: tetrisVid,
         desc: "Tetris game written with tutorial (with my improvements and additions). Written in c++ using Cmake and Raylib as GameEngine",
+        code: "https://github.com/M1chal3k28/Tetris.git",
+    }, { // Stickman Jump with sfml
+        id: 4,
+        logo: stickmanLogo,
+        images: [
+            { // gameplay screenshot
+                src: stickmanGameplay,
+                desc: "Gameplay of snake",
+            },
+        ],
+        video: stickmanVid,
+        desc: "My game written in C++ using SFML as GameEngine. Written in Visual Studio 2022",
+        code: "https://github.com/M1chal3k28/StickmanJUMP.git",
     },
 ];
 
