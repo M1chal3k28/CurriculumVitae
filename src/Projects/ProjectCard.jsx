@@ -1,39 +1,20 @@
 import { Link } from "react-router-dom";
 import React, {useRef} from 'react'
-import { Player } from 'video-react';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel from "../Carousel";
 
 function ProjectCard(props) {
     let i = 0;
-    const images = props.images.map((image) => (
-        <div key={i++} className="w-auto">
-            <img src={image.src} className="object-scale-down w-[90%] h-[90%] "/>
+    const assets = props.images.map((image) => (
+        <div key={i++} className="justify-center flex">
+            <img src={image.src} className="object-scale-down max-h-lg"/>
         </div>
     ));
-    i = 0;
-    const videos = props.videos.map((video) => (
-        <div key={i++} >
-            <Player className="w-[90%] h-[90%] object-scale-down">
-                <source src={video.src} />
-            </Player>
-        </div>
-    ));
+    assets.push(<div key={i++} className="justify-center flex"><video autoPlay muted loop> <source src={props.video} /></video></div>);
     
     const container = useRef(null);
     const toggleAssets = () => {
         container.current.classList.toggle("hidden")
     }
-
-    // For slider style
-    const arrowStyles = {
-        position: 'absolute',
-        zIndex: 2,
-        top: 'calc(50% - 15px)',
-        width: 30,
-        height: 30,
-        cursor: 'pointer',
-    };
 
     return (
         <>
@@ -49,34 +30,11 @@ function ProjectCard(props) {
                 </div>
             </button>
 
-            <div ref={container} className="assetsContainer bg-last max-[1200px]:h-auto py-3 flex hidden">
+            <div ref={container} className="assetsContainer bg-last py-3 flex hidden">
                 <button onClick={() => toggleAssets()} className="absolute top-0 right-0 md:top-2 md:right-5 cursor-pointer py-2 px-2 z-50"><i className="fa-regular fa-circle-xmark"></i></button>
-                <div> 
-                    <Carousel 
-                            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                                hasPrev && (
-                                    <button className="bg-primary" type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 15 }}>
-                                        -
-                                    </button>
-                                )
-                            }
-                            
-                            renderArrowNext={(onClickHandler, hasNext, label) =>
-                                hasNext && (
-                                    <button className="bg-primary" type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 15 }}>
-                                        +
-                                    </button>
-                                )
-                            }
-
-                            renderIndicator={null}
-
-                            className="relative items-center justify-center text-black" dynamicHeight="true" selectedItem={images.length + videos.length - 1} useKeyboardArrows="true" showThumbs={false}
-                        >
-                        {images}
-                        {videos}
-                    </Carousel>
-                </div>
+                <Carousel>
+                    {assets}
+                </Carousel>
             </div>
         </>
     );

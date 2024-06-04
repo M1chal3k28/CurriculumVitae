@@ -21,14 +21,9 @@ const Projects = [
                 desc: "Chat window for chating",
             },
         ],
-        videos: [
-            { // chat video
-                src: chatVideo,
-                desc: "Showcase of chat in action"
-            },
-        ],
+        video: chatVideo,
         desc: "Real-time chat made in AJAX and php",
-    }
+    },
 ];
 
 export default Projects;
