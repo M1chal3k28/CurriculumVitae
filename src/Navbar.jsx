@@ -34,7 +34,7 @@ function Navbar() {
                         <div className="hidden md:flex items-center space-x-3">
                             <Link to={Skills} className="py-4 px-1 text-gray-600 hover:text-gray-900">Skills</Link>
                             <Link to={Education} className="py-4 px-1 text-gray-600 hover:text-gray-900">Education</Link>
-                            <Link to={Projects}className="py-4 px-1 text-gray-600 hover:text-gray-900">Projects</Link>
+                            <Link to={Projects} className="py-4 px-1 text-gray-600 hover:text-gray-900">Projects</Link>
                         </div>
                     </div>
 
@@ -56,10 +56,10 @@ function Navbar() {
 
             {/* mobile menu */}
             <div ref={menuRef} className="md:hidden mobile-menu hidden overflow-hidden">
-                <a href="" className="block py-2 px-4 text-sm hover:bg-gray-200">Skills</a>
-                <a href="" className="block py-2 px-4 text-sm hover:bg-gray-200">Education</a>
-                <a href="" className="block py-2 px-4 text-sm hover:bg-gray-200">Projects</a>
-                <a href="" className="font-bold block py-2 px-4 text-sm hover:bg-gray-200">About me</a>
+                <Link to={Skills} className="block py-2 px-4 text-sm hover:bg-gray-200">Skills</Link>
+                <Link to={Education} className="block py-2 px-4 text-sm hover:bg-gray-200">Education</Link>
+                <Link to={Projects} className="block py-2 px-4 text-sm hover:bg-gray-200">Projects</Link>
+                <Link to={currPath} className="font-bold block py-2 px-4 text-sm hover:bg-gray-200">About me</Link>
             </div>
         </nav>
     );
