@@ -73,6 +73,7 @@ const router = createBrowserRouter([
     element: <>
       <Navbar />
       <NotFoundPage />
+      <Footer />
     </>
   }
 ]);

@@ -9,7 +9,7 @@ function ProjectCard(props) {
             <img src={image} className="object-scale-down max-h-lg"/>
         </div>
     ));
-    assets.push(<div key={i++} className="justify-center flex"><video autoPlay muted loop className="z-10" controls> <source src={props.video} /></video></div>);
+    assets.push(<div key={i++} className="flex"><video autoPlay muted loop> <source src={props.video} /></video></div>);
     
     const container = useRef(null);
     const toggleAssets = () => {
