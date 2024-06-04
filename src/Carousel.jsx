@@ -22,10 +22,11 @@ function Carousel({children: slides}) {
                     <ChevronRight />
                 </button>
             </div>
-            <div className="absolute bottom-4 right-0 left-0">
+            <div className="absolute bottom-4 right-0 left-0 z-20">
                 <div className="flex items-center justify-center gap-2">
                     {slides.map((_, i) => (
-                        <div 
+                        <div
+                            key={i} 
                             className={`
                             transition-all w-3 h-3 bg-primary rounded-full
                             ${curr === i ? "p-2" : "bg-opacity-50"}

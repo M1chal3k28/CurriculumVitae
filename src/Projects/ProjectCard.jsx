@@ -6,10 +6,10 @@ function ProjectCard(props) {
     let i = 0;
     const assets = props.images.map((image) => (
         <div key={i++} className="justify-center flex">
-            <img src={image.src} className="object-scale-down max-h-lg"/>
+            <img src={image} className="object-scale-down max-h-lg"/>
         </div>
     ));
-    assets.push(<div key={i++} className="justify-center flex"><video autoPlay muted loop> <source src={props.video} /></video></div>);
+    assets.push(<div key={i++} className="justify-center flex"><video autoPlay muted loop className="z-10" controls> <source src={props.video} /></video></div>);
     
     const container = useRef(null);
     const toggleAssets = () => {
@@ -21,7 +21,7 @@ function ProjectCard(props) {
             <div onClick={() => toggleAssets()} className="h-full w-full cursor-help" title="See more">
                 <div className="w-auto h-full max-w-96 md:py-5 md:px-5 py-1 px-1 bg-last flex flex-col sm:text-xl text-[15px] rounded opacity-100 md:opacity-70 hover:opacity-100 transition duration-300 shadow-lg">
                     <div className="flex items-center flex justify-center flex-col xl:flex-row">
-                        <img src={props.projectLogo} alt="project Image" className="max-h-20" />
+                        <img src={props.projectLogo} alt="project Image" className="max-h-36" />
                     </div>
 
                     <div className="px-5 py-2 flex justify-center break-normal">
@@ -33,9 +33,9 @@ function ProjectCard(props) {
                 </div>
             </div>
 
-            <div ref={container} className="assetsContainer bg-last py-3 flex hidden">
-                <button onClick={() => toggleAssets()} className="absolute top-0 right-0 md:top-2 md:right-5 cursor-pointer py-2 px-2 z-50"><i className="fa-regular fa-circle-xmark"></i></button>
-                <Carousel>
+            <div ref={container} className="assetsContainer max-[800px]:h-[50%] bg-last py-3 flex hidden">
+                <button onClick={() => toggleAssets()} className="absolute top-0 right-0 md:top-2 md:right-5 cursor-pointer py-2 px-2 z-20"><i className="fa-regular fa-circle-xmark"></i></button>
+                <Carousel className="h-auto">
                     {assets}
                 </Carousel>
             </div>

@@ -5,13 +5,13 @@ import { Outlet } from "react-router-dom"
 
 function App() {
   return (
-      <>
+      <div className="min-h-screen flex flex-col mb-0">
         <AboutMe />
         <Hr />
 
         <Outlet />
-      </>
+      </div>
   )
 }
 
-export default App
+export default App;

@@ -11,7 +11,7 @@ function AboutMe() {
                     </div>
 
                     {/* Text content */}
-                    <div className="flex flex-col md:w-96 py-2 px-2 md:text-xl sm:text-sm max-[320px]:text-[5px]">
+                    <div className="flex flex-col md:w-96 py-2 px-2 md:text-xl sm:text-sm max-[320px]:text-[4px]">
                         <div className="font-bold "><h1>About Me</h1></div>
                         <div></div>
                         {/* content */}

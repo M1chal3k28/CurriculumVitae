@@ -20,61 +20,66 @@ import stickmanLogo from "./assets/stickmanJump/stickmanLogo.png"
 import stickmanGameplay from "./assets/stickmanJump/gameplay.png"
 import stickmanVid from "./assets/stickmanJump/stickmanJumpVid.mp4"
 
+// PHP web in group
+import creatorEditing from "./assets/PHPwebProject/ArticleCreatorEditing.png"
+import articlePage from "./assets/PHPwebProject/articlePage.png"
+import articlePage2 from "./assets/PHPwebProject/articlePage2.png"
+import creatorBlank from "./assets/PHPwebProject/CreatorBlank.png"
+import loginPHP from "./assets/PHPwebProject/login.png"
+import profilePage from "./assets/PHPwebProject/profilePage.png"
+import mainPage from "./assets/PHPwebProject/mainPage.png"
+import registerPage from "./assets/PHPwebProject/register.png"
+import motonewsVid from "./assets/PHPwebProject/motonewsVid.mp4"
+import motonewsLogo from "./assets/PHPwebProject/logo.png"
+
+// For shop sim in cpp
+import videoSimCpp from "./assets/shopSimCpp/ShopSimulator.mp4"
+import logoSimCpp from "./assets/shopSimCpp/logoSimCpp.png"
+import simCppPng from "./assets/shopSimCpp/screenShot.png"
+
 const Projects = [
     { // Chat in AJAX, php, mysql, js, css
         id: 1,
         logo: chatLogo,
-        images: [
-            { // chatLogin
-                src: chatLogin,
-                desc: "Login window",
-            }, { // chatMenu
-                src: chatMenu,
-                desc: "Menu of chat app",
-            }, { // chatWindow
-                src: chatWindow,
-                desc: "Chat window for chating",
-            },
-        ],
+        images: [chatLogin, chatMenu, chatWindow],
         video: chatVideo,
-        desc: "Real-time chat made in AJAX and php with tutorial",
+        desc: "Real-time chat made in AJAX and PHP with tutorial",
         code: "https://github.com/M1chal3k28/Chat_AJAX.git",
     }, { // Snake in python
         id: 2,
         logo: snakeLogo,
-        images: [
-            { // gameplay screenshot
-                src: snakeGameplay,
-                desc: "Gameplay of snake",
-            },
-        ],
+        images: [snakeGameplay],
         video: snakeGameplayVid,
-        desc: "Snake game written in python (pygame)",
+        desc: "Snake game written in Python (pygame)",
         code: "https://github.com/M1chal3k28/snake.git",
     }, { // Tetris
         id: 3,
         logo: tetrisLogo,
-        images: [
-            { // gameplay screenshot
-                src: tetrisGameplay,
-                desc: "Gameplay of snake",
-            },
-        ],
+        images: [tetrisGameplay],
         video: tetrisVid,
-        desc: "Tetris game written with tutorial (with my improvements and additions). Written in c++ using Cmake and Raylib as GameEngine",
+        desc: "Tetris game written with tutorial (with my improvements and additions). Written in C++ using Cmake and Raylib as GameEngine",
         code: "https://github.com/M1chal3k28/Tetris.git",
     }, { // Stickman Jump with sfml
         id: 4,
         logo: stickmanLogo,
-        images: [
-            { // gameplay screenshot
-                src: stickmanGameplay,
-                desc: "Gameplay of snake",
-            },
-        ],
+        images: [stickmanGameplay],
         video: stickmanVid,
         desc: "My game written in C++ using SFML as GameEngine. Written in Visual Studio 2022",
         code: "https://github.com/M1chal3k28/StickmanJUMP.git",
+    }, { // Website in PHP created in group for school project
+        id: 5,
+        logo: motonewsLogo,
+        images: [creatorEditing, articlePage, articlePage2, creatorBlank, loginPHP, profilePage, mainPage, registerPage],
+        video: motonewsVid,
+        desc: "Website poject in PHP made with my friends. On this website you can read articles and write comments :)",
+        code: "https://github.com/M1chal3k28/PHP_website_Project.git",
+    }, { // Shop simulator
+        id: 6,
+        logo: logoSimCpp,
+        images: [simCppPng],
+        video: videoSimCpp,
+        desc: "Simulator of shop where you can be manager adding and changing products, or customer which buys items from shop. Written in pure C++",
+        code: "https://github.com/M1chal3k28/Shop.git",
     },
 ];
 
