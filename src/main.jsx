@@ -47,21 +47,21 @@ window.onload = () => {
 
 const router = createBrowserRouter([
   {
-    path: '/Cv_react_tailwindcss/',
+    path: '/CurriculumVitae/',
     element: <App/>,
     children: [
       {
-        path: '/Cv_react_tailwindcss/',
+        path: '/CurriculumVitae/',
         element: <>
           <CourseContainer />
         </>,
       }, {
-        path: '/Cv_react_tailwindcss/projects',
+        path: '/CurriculumVitae/projects',
         element: <>
           <ProjectsContainer />
         </>,
       },  {
-        path: '/Cv_react_tailwindcss/education',
+        path: '/CurriculumVitae/education',
         element: <>
           <EducationsContainer />
         </>,

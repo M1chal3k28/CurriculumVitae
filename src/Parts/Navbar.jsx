@@ -26,7 +26,7 @@ function Navbar() {
         }
     };
 
-    const currPath = "/Cv_react_tailwindcss/";
+    const currPath = "/CurriculumVitae/";
     const Skills = currPath + "skills";
     const Education = currPath + "education";
     const Projects = currPath + "projects";

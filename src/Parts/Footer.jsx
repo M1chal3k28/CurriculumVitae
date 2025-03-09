@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Footer() {
-    const currPath = "/Cv_react_tailwindcss/";
+    const currPath = "/CurriculumVitae/";
     const Skills = currPath + "skills";
     const Education = currPath + "education";
     const Projects = currPath + "projects";
@@ -40,7 +40,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <Link to="/Cv_react_tailwindcss/" className="flex text-center justify-content-center">
+                <Link to="/CurriculumVitae/" className="flex text-center justify-content-center">
                     <span className="text-gray-400 text-sm xl:text-1xl">Michał Balcerak &copy; {new Date().getFullYear()}</span>
                 </Link>
             </div>
