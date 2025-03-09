@@ -23,19 +23,23 @@ window.onload = () => {
     selector: '.background',
     color: "#222222",
     connectParticles: "true",
-    maxParticles: "60",
+    maxParticles: "100",
     responsive: [
+      {
+        breakpoint: 1024,
+        options: {
+          maxParticles: 50,
+        }
+      },
       {
         breakpoint: 768,
         options: {
-          maxParticles: 200,
-          connectParticles: false
+          maxParticles: 25,
         }
       }, {
         breakpoint: 425,
         options: {
-          maxParticles: 100,
-          connectParticles: false
+          maxParticles: 20,
         }
       }, {
         breakpoint: 320,
