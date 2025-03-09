@@ -15,6 +15,8 @@ import EducationsContainer from './Education/EducationsContainer.jsx'
 import './index.css'
 import Particles from 'particlesjs'
 
+import { basePath } from './Config.jsx'
+
 // Load particles for background
 window.onload = () => {
   Particles.init({
@@ -47,21 +49,21 @@ window.onload = () => {
 
 const router = createBrowserRouter([
   {
-    path: '/CurriculumVitae/',
+    path: basePath,
     element: <App/>,
     children: [
       {
-        path: '/CurriculumVitae/',
+        path: basePath,
         element: <>
           <CourseContainer />
         </>,
       }, {
-        path: '/CurriculumVitae/projects',
+        path: basePath + 'projects',
         element: <>
           <ProjectsContainer />
         </>,
       },  {
-        path: '/CurriculumVitae/education',
+        path: basePath + 'education',
         element: <>
           <EducationsContainer />
         </>,

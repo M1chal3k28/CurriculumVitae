@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
+import { basePath } from "../Config";
 
 function Footer() {
-    const currPath = "/CurriculumVitae/";
-    const Skills = currPath + "skills";
-    const Education = currPath + "education";
-    const Projects = currPath + "projects";
+    const Skills = basePath + "skills";
+    const Education = basePath + "education";
+    const Projects = basePath + "projects";
 
     return (
         <footer className="bg-gray-900 text-white absolute bottom-0 w-full">
@@ -16,7 +16,7 @@ function Footer() {
                                 <Link to={Skills}    className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Skills</Link>
                                 <Link to={Education} className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Education</Link>
                                 <Link to={Projects}  className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Projects</Link>
-                                <Link to={currPath}  className="py-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Courses</Link>
+                                <Link to={basePath}  className="py-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Courses</Link>
                             </div>
                         </div>
 
@@ -40,7 +40,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <Link to="/CurriculumVitae/" className="flex text-center justify-content-center">
+                <Link to={basePath} className="flex text-center justify-content-center">
                     <span className="text-gray-400 text-sm xl:text-1xl">Michał Balcerak &copy; {new Date().getFullYear()}</span>
                 </Link>
             </div>
