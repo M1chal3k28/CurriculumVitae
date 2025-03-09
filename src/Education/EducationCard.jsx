@@ -14,10 +14,10 @@ function EducationCard(props) {
                     </ul>
 
                     <div className="px-5 py-2 flex justify-center break-normal text-center align-center items-center">
-                        <p>
+                        <div>
                             {props.content}
                             {props.link}
-                        </p>
+                        </div>
                     </div>
                 </div>
             </button>

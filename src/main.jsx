@@ -24,6 +24,7 @@ window.onload = () => {
     color: "#222222",
     connectParticles: "true",
     maxParticles: "100",
+    sizeVariations: 2,
     responsive: [
       {
         breakpoint: 1024,
