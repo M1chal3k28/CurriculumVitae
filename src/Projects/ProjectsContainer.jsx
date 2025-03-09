@@ -2,7 +2,6 @@ import ProjectCard from "./ProjectCard";
 import Projects from "./Projects";
 
 function ProjectsContainer() {
-
     const projectCards = Projects.map((Project) => (
         <li key={Project.id}>
             <ProjectCard projectLogo={Project.logo} content={Project.desc} images={Project.images} video={Project.video} code={Project.code}/>

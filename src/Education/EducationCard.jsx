@@ -9,7 +9,7 @@ function EducationCard(props) {
         <>
             <button onClick={() => toggleCeftificate()} className="h-full w-full" title="See more">
                 <div className="w-auto h-full max-w-[500px] md:py-5 md:px-5 py-1 px-1 bg-last flex flex-col sm:text-xl text-[15px] rounded opacity-100 md:opacity-70 hover:opacity-100 transition duration-300 shadow-lg">
-                    <ul className="flex items-center flex justify-center flex-col xl:flex-row">
+                    <ul className="flex items-center justify-center flex-col xl:flex-row">
                         {images}
                     </ul>
 

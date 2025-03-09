@@ -20,7 +20,7 @@ function ProjectCard(props) {
         <>
             <div onClick={() => toggleAssets()} className="h-full w-full cursor-help" title="See more">
                 <div className="w-auto h-full max-w-96 md:py-5 md:px-5 py-1 px-1 bg-last flex flex-col sm:text-xl text-[15px] rounded opacity-100 md:opacity-70 hover:opacity-100 transition duration-300 shadow-lg">
-                    <div className="flex items-center flex justify-center flex-col xl:flex-row">
+                    <div className="flex items-center justify-center flex-col xl:flex-row">
                         <img src={props.projectLogo} alt="project Image" className="max-h-36" />
                     </div>
 
