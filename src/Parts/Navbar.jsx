@@ -4,10 +4,26 @@ import { Link } from 'react-router-dom';
 function Navbar() {
     const btnRef = useRef(null);
     const menuRef = useRef(null);
+    const navRef = useRef(null);
 
     const showMenu = () => {
-        menuRef.current.classList.toggle('hidden');
+        // Toggle the button
         btnRef.current.classList.toggle('tham-active');
+
+        // Toggle the menu visible flag
+        menuRef.current.classList.toggle('mobile-menu-visible');
+
+        // Get height of nav
+        const navHeight = navRef.current.offsetHeight;
+
+        // Place the menu
+        if (menuRef.current.classList.contains('mobile-menu-visible')) {
+            // if menu is not visible
+            menuRef.current.style.top = `${-200}px`;
+        } else {
+            // if menu is visible
+            menuRef.current.style.top = `${navHeight}px`, 10;
+        }
     };
 
     const currPath = "/Cv_react_tailwindcss/";
@@ -16,7 +32,8 @@ function Navbar() {
     const Projects = currPath + "projects";
 
     return (
-        <nav className="xl:text-2xl bg-primary opacity-70 hover:opacity-100 transition-all duration-300">
+        <>
+        <nav ref={navRef} className="xl:text-2xl bg-primary opacity-70 hover:opacity-100 transition-all duration-300 relative z-20">
             <div className="max-w-5xl mx-auto px-2">
                 <div className="flex justify-between">
                     <div className="flex space-x-4">
@@ -40,7 +57,7 @@ function Navbar() {
 
                     {/* Secondary nav */}
                     <div className="hidden md:flex items-center">
-                        <Link to={currPath} className="py-2 px-3 text-gray-700 font-bold bg-black-300 rounded hover:bg-last rounded transition duration-300">Courses</Link>
+                        <Link to={currPath} className="py-2 px-3 text-gray-700 font-bold bg-black-300 hover:bg-last rounded transition duration-300">Courses</Link>
                     </div>
 
                     {/* mobile button visible only when small screen */}
@@ -53,15 +70,16 @@ function Navbar() {
                     </div>
                 </div>
             </div>
-
-            {/* mobile menu */}
-            <div ref={menuRef} className="md:hidden mobile-menu hidden overflow-hidden">
-                <Link to={Skills} className="block py-2 px-4 text-sm hover:bg-gray-200">Skills</Link>
-                <Link to={Education} className="block py-2 px-4 text-sm hover:bg-gray-200">Education</Link>
-                <Link to={Projects} className="block py-2 px-4 text-sm hover:bg-gray-200">Projects</Link>
-                <Link to={currPath} className="font-bold block py-2 px-4 text-sm hover:bg-gray-200">About me</Link>
-            </div>
         </nav>
+
+        {/* mobile menu */}
+            <div ref={menuRef} className="mobile-menu-visible md:hidden mobile-menu overflow-hidden absolute right-0 z-10 justify-end text-end bg-primary opacity-70 hover:opacity-100  rounded-bl-md transition-all duration-500 ease-in-out top-[-200px]">
+            <Link to={Skills}    className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Skills</Link>
+            <Link to={Education} className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Education</Link>
+            <Link to={Projects}  className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Projects</Link>
+            <Link to={currPath}  className="font-bold block py-2 px-4 text-lg hover:bg-gray-200 text-center">About me</Link>
+        </div>
+        </>
     );
 }
 
