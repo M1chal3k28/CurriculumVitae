@@ -10,7 +10,7 @@ import NotFoundPage from "./Parts/NotFoundPage.jsx"
 // Parts
 import CourseContainer from './Courses/CoursesContainer.jsx'
 import ProjectsContainer from './Projects/ProjectsContainer.jsx';
-import EducationsContainer from './Education/EducationsContainer.jsx'
+import EducationsContainer from './Education/EducationsContainer'
 
 import './index.css'
 import Particles from 'particlesjs'

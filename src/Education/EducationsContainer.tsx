@@ -1,10 +1,11 @@
-import EducationCard from "./EducationCard.jsx";
-import Educations from "./Educations.jsx";
+import EducationCard from "./EducationCard";
+import { Education } from "./Educations";
+import Educations from "./Educations";
 
-function EducationsContainer() {
-    const Cards = Educations.map((Education) => (
-        <li key={Education.id}>
-            <EducationCard imageSrc={Education.images} content={Education.content} id={Education.id} link={Education.link}/>
+const EducationsContainer = () => {
+    const Cards = Educations.map((education: Education) => (
+        <li key={education.id}>
+            <EducationCard education={education}/>
         </li>
     ));
 
