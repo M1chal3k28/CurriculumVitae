@@ -1,8 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather"
 
+type CarouselSlide = JSX.Element;
+type CarouselProps = {
+    slides: CarouselSlide[]
+}
 
-function Carousel({children: slides}) {
+const Carousel: React.FC<CarouselProps> = ({slides}: CarouselProps) => {
     const [curr, setCurr] = useState(0);
 
     const prev = () => 
@@ -40,3 +44,4 @@ function Carousel({children: slides}) {
 }
 
 export default Carousel;
+export { CarouselSlide, Carousel };

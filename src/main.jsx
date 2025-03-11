@@ -9,7 +9,7 @@ import NotFoundPage from "./Parts/NotFoundPage.jsx"
 
 // Parts
 import CourseContainer from './Courses/CoursesContainer.jsx'
-import ProjectsContainer from './Projects/ProjectsContainer.jsx';
+import ProjectsContainer from './Projects/ProjectsContainer';
 import EducationsContainer from './Education/EducationsContainer'
 
 import './index.css'

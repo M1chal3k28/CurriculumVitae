@@ -37,7 +37,16 @@ import videoSimCpp from "./assets/shopSimCpp/ShopSimulator.mp4"
 import logoSimCpp from "./assets/shopSimCpp/logoSimCpp.png"
 import simCppPng from "./assets/shopSimCpp/screenShot.png"
 
-const Projects = [
+interface Project {
+    id: number,
+    logo: string,
+    images: string[],
+    video: string,
+    desc: string,
+    code: string
+};
+
+const Projects: Project[] = [
     { // Chat in AJAX, php, mysql, js, css
         id: 1,
         logo: chatLogo,
@@ -84,3 +93,4 @@ const Projects = [
 ];
 
 export default Projects;
+export { Project, Projects };

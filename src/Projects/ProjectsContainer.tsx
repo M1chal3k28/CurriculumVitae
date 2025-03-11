@@ -1,10 +1,10 @@
 import ProjectCard from "./ProjectCard";
-import Projects from "./Projects";
+import { Projects, Project } from "./Projects";
 
-function ProjectsContainer() {
-    const projectCards = Projects.map((Project) => (
-        <li key={Project.id}>
-            <ProjectCard projectLogo={Project.logo} content={Project.desc} images={Project.images} video={Project.video} code={Project.code}/>
+const ProjectsContainer = () => {
+    const projectCards = Projects.map((project: Project) => (
+        <li key={project.id}>
+            <ProjectCard project={project}/>
         </li>
     ));
 
