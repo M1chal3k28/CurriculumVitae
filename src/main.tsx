@@ -1,21 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App.jsx'
-import Navbar from './Parts/Navbar.jsx'
-import Footer from './Parts/Footer.jsx'
-import NotFoundPage from "./Parts/NotFoundPage.jsx"
+import App from './App';
+import Navbar from './Parts/Navbar';
+import Footer from './Parts/Footer';
+import NotFoundPage from "./Parts/NotFoundPage";
 
 // Parts
-import CourseContainer from './Courses/CoursesContainer'
+import CourseContainer from './Courses/CoursesContainer';
 import ProjectsContainer from './Projects/ProjectsContainer';
-import EducationsContainer from './Education/EducationsContainer'
+import EducationsContainer from './Education/EducationsContainer';
 
-import './index.css'
-import Particles from 'particlesjs'
+import './index.css';
+import Particles from 'particlesjs';
 
-import { basePath } from './Config.jsx'
+import { basePath, projectsPath, educationPath, skillsPath } from './Config'
 
 // Load particles for background
 window.onload = () => {
@@ -63,12 +63,12 @@ const router = createBrowserRouter([
           <CourseContainer />
         </>,
       }, {
-        path: basePath + 'projects',
+        path: projectsPath,
         element: <>
           <ProjectsContainer />
         </>,
       },  {
-        path: basePath + 'education',
+        path: educationPath,
         element: <>
           <EducationsContainer />
         </>,
@@ -84,7 +84,7 @@ const router = createBrowserRouter([
   }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement).render(
   <React.StrictMode>
     <RouterProvider router={router}> 
     </RouterProvider>

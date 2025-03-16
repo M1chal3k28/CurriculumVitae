@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { basePath } from "../Config";
 
-function NotFoundPage() {
+const NotFoundPage = () => {
     return (
         <div className="flex justify-center">
             <div className="flex text-center flex-col text-xl">

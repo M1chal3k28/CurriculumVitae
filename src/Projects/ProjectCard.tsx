@@ -7,7 +7,7 @@ type ProjectCardProps = {
     project: Project
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }: ProjectCardProps) => {
     // Create slides from images
     const assets: CarouselSlide[] = project.images.map(( image: string, index: number ) => (
         <div key={index} className="justify-center flex">

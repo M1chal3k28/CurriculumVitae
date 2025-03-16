@@ -1,4 +1,5 @@
 // declarations.d.ts
+declare module 'particlesjs';
 
 // For image import
 declare module "*.png" {

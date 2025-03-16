@@ -6,7 +6,7 @@ type CourseCardProps = {
     course: Course
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ course }: CourseCardProps) => {
     const images = course.imageSrc.map(
         ( image: string, i: number ) => 
         <li key={i} >

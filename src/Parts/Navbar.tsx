@@ -1,35 +1,37 @@
 import React, {useRef} from 'react'
 import { Link } from 'react-router-dom';
-import { basePath } from '../Config';
+import { basePath, projectsPath, educationPath, skillsPath } from '../Config';
 
-function Navbar() {
-    const btnRef = useRef(null);
-    const menuRef = useRef(null);
-    const navRef = useRef(null);
+const Navbar = () => {
+    const btnRef = useRef<HTMLButtonElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
+    const navRef = useRef<HTMLDivElement>(null);
 
     const showMenu = () => {
-        // Toggle the button
-        btnRef.current.classList.toggle('tham-active');
+        if (btnRef && menuRef && navRef &&
+            btnRef.current && menuRef.current && navRef.current
+        ) {
+            // Toggle the button
+            btnRef.current.classList.toggle('tham-active');
 
-        // Toggle the menu visible flag
-        menuRef.current.classList.toggle('mobile-menu-visible');
+            // Toggle the menu visible flag
+            menuRef.current.classList.toggle('mobile-menu-visible');
 
-        // Get height of nav
-        const navHeight = navRef.current.offsetHeight;
+            // Get height of nav
+            const navHeight = navRef.current.offsetHeight;
 
-        // Place the menu
-        if (menuRef.current.classList.contains('mobile-menu-visible')) {
-            // if menu is not visible
-            menuRef.current.style.top = `${-200}px`;
+            // Place the menu
+            if (menuRef.current.classList.contains('mobile-menu-visible')) {
+                // if menu is not visible
+                menuRef.current.style.top = `${-200}px`;
+            } else {
+                // if menu is visible
+                menuRef.current.style.top = `${navHeight}px`, 10;
+            }
         } else {
-            // if menu is visible
-            menuRef.current.style.top = `${navHeight}px`, 10;
+            console.log("Error | Navbar | showMenu | Missing Refs"); 
         }
     };
-
-    const Skills = basePath + "skills";
-    const Education = basePath + "education";
-    const Projects = basePath + "projects";
 
     return (
         <>
@@ -49,9 +51,9 @@ function Navbar() {
 
                         {/* primary nav */}
                         <div className="hidden md:flex items-center space-x-3">
-                            <Link to={Skills} className="py-4 px-1 text-gray-600 hover:text-gray-900">Skills</Link>
-                            <Link to={Education} className="py-4 px-1 text-gray-600 hover:text-gray-900">Education</Link>
-                            <Link to={Projects} className="py-4 px-1 text-gray-600 hover:text-gray-900">Projects</Link>
+                            <Link to={skillsPath} className="py-4 px-1 text-gray-600 hover:text-gray-900">Skills</Link>
+                            <Link to={educationPath} className="py-4 px-1 text-gray-600 hover:text-gray-900">Education</Link>
+                            <Link to={projectsPath} className="py-4 px-1 text-gray-600 hover:text-gray-900">Projects</Link>
                         </div>
                     </div>
 
@@ -74,9 +76,9 @@ function Navbar() {
 
         {/* mobile menu */}
             <div ref={menuRef} className="mobile-menu-visible md:hidden mobile-menu overflow-hidden absolute right-0 z-10 justify-end text-end bg-primary opacity-70 hover:opacity-100  rounded-bl-md transition-all duration-500 ease-in-out top-[-200px]">
-            <Link to={Skills}    className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Skills</Link>
-            <Link to={Education} className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Education</Link>
-            <Link to={Projects}  className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Projects</Link>
+            <Link to={skillsPath}    className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Skills</Link>
+            <Link to={educationPath} className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Education</Link>
+            <Link to={projectsPath}  className="block py-2 px-4 text-lg hover:bg-gray-200 text-center">Projects</Link>
             <Link to={basePath}  className="font-bold block py-2 px-4 text-lg hover:bg-gray-200 text-center">About me</Link>
         </div>
         </>

@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
-import { basePath } from "../Config";
+import { basePath, projectsPath, educationPath, skillsPath } from "../Config";
 
-function Footer() {
-    const Skills = basePath + "skills";
-    const Education = basePath + "education";
-    const Projects = basePath + "projects";
-
+const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white absolute bottom-0 w-full">
             <div className="md:px-12 px-10 bg-[#ffffff19] py-2 flex items-center flex-col space-y-4">
@@ -13,9 +9,9 @@ function Footer() {
                     <div className="flex flex-row justify-around">
                         <div className="flex justify-center mx-2">
                             <div className="items-center md:flex-row md:space-x-1 flex flex-col">
-                                <Link to={Skills}    className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Skills</Link>
-                                <Link to={Education} className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Education</Link>
-                                <Link to={Projects}  className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Projects</Link>
+                                <Link to={skillsPath}    className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Skills</Link>
+                                <Link to={educationPath} className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Education</Link>
+                                <Link to={projectsPath}  className="py-1 px-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Projects</Link>
                                 <Link to={basePath}  className="py-1 text-gray-500 hover:text-gray-300 text-xs xl:text-xl">Courses</Link>
                             </div>
                         </div>
