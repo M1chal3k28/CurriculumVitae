@@ -8,7 +8,7 @@ import Footer from './Parts/Footer.jsx'
 import NotFoundPage from "./Parts/NotFoundPage.jsx"
 
 // Parts
-import CourseContainer from './Courses/CoursesContainer.jsx'
+import CourseContainer from './Courses/CoursesContainer'
 import ProjectsContainer from './Projects/ProjectsContainer';
 import EducationsContainer from './Education/EducationsContainer'
 

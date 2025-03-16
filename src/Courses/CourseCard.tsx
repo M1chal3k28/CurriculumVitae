@@ -1,14 +1,26 @@
 import { Link } from "react-router-dom";
 import React, {useRef} from 'react'
+import { Course } from "./Courses";
 
-function CourseCard(props) {
-    let i = 0;
-    const images = props.imageSrc.map((image) => <li key={i++} ><img src={image} className="object-scale-down w-full max-w-32"/></li>);
+type CourseCardProps = {
+    course: Course
+}
+
+const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
+    const images = course.imageSrc.map(
+        ( image: string, i: number ) => 
+        <li key={i} >
+            <img src={image} className="object-scale-down w-full max-w-32"/>
+        </li>
+    );
     
-    const container = useRef(null);
-
+    const container = useRef<HTMLDivElement>(null);
     const toggleCeftificate = () => {
-        container.current.classList.toggle("hidden")
+        // Check if the container exists
+        if (container && container.current) {
+            container.current.classList.toggle("hidden");
+            container.current.classList.toggle("flex");
+        }
     }
 
     return (
@@ -20,15 +32,15 @@ function CourseCard(props) {
                     </ul>
 
                     <div className="px-5 py-2 flex justify-center break-normal">
-                        {props.content}
+                        {course.content}
                     </div>
                 </div>
             </button>
 
-            <div ref={container} className="assetsContainer bg-last max-[1200px]:h-auto py-3 flex hidden">
+            <div ref={container} className="assetsContainer bg-last max-[1200px]:h-auto py-3 hidden">
                 <button onClick={() => toggleCeftificate()} className="absolute top-0 right-0 md:top-2 md:right-5 cursor-pointer py-2 px-2 z-50 text-2xl"><i className="fa-regular fa-circle-xmark"></i></button>
                 <div className="relative w-full h-full flex justify-center items-center"> 
-                    <img src={props.certificate} alt="Certification Image" className="object-scale-down h-[90%] max-h-screen"/>
+                    <img src={course.certificate} alt="Certification Image" className="object-scale-down h-[90%] max-h-screen"/>
                 </div>
             </div>
         </>

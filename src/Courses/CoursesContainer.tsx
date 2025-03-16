@@ -1,10 +1,10 @@
-import CourseCard from "./CourseCard.jsx";
-import Courses from "./Courses.jsx";
+import CourseCard from "./CourseCard";
+import Courses, { Course } from "./Courses";
 
 function CourseContainer() {
-    const Cards = Courses.map((Course) => (
-        <li key={Course.id}>
-            <CourseCard imageSrc={Course.imageSrc} content={Course.content} id={Course.id} certificate={Course.certificate}/>
+    const Cards = Courses.map((course: Course) => (
+        <li key={course.id}>
+            <CourseCard course={course}/>
         </li>
     ));
 

@@ -13,7 +13,15 @@ import ItFitness from "./assets/itFitnessCert.png"
 import JsCourse from "./assets/JsCourse.png"
 import IoeCourse from "./assets/IoE.png"
 
-const Courses = [
+interface Course {
+    id: number,
+    imageSrc: string[],
+    content: string,
+    finished: number[],
+    certificate: string
+};
+
+const Courses: Course[] = [
     { // Cisco Js OPENEDG
         id: 0,
         imageSrc: [ciscoLogo, jsOpenEDG],
@@ -54,3 +62,4 @@ const Courses = [
 ];
 
 export default Courses;
+export { Course, Courses };
